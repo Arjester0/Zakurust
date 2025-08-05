@@ -2,13 +2,3 @@
   name: Reimu
   expression: happy
   line: Welcome to the story!
-
-- type: CharacterLine
-  name: Alice
-  expression: sad
-  line: Something terrible has happened...
-
-- type: Choice
-  prompt: What will you do?
-  option1: Explore
-  option2: Rest

@@ -37,6 +37,19 @@ fn script_spawn(mut commands: Commands, asset_server: Res<AssetServer>) {
             } => {
                 println!("{} [{}]: {}", name, expression, line);
                 // Pass (name, expression) to your character spawning system
+                // let character = name;
+                let character_image = name.to_string() + expression + ".jpeg";
+
+                let character_sprite = Sprite {
+                    image: asset_server.load(character_image),
+                    ..Default::default()
+                };
+
+                commands.spawn((
+                    character_sprite,
+                    Transform::default(),
+                    GlobalTransform::default(),
+                ));
             }
             ScriptCommand::Choice {
                 prompt,
