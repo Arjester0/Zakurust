@@ -23,6 +23,28 @@ pub fn scene_creation(
         GlobalTransform::default(),
     ));
 
+    let d_box_size = Vec2::new(window.width() * 0.8, window.height() * 0.2);
+    let d_box_pos = Vec2::new(0.0, -window.height() * 0.4);
+    let d_box_font = TextFont {
+        font: asset_server.load("fonts/Roboto-Regular.ttf"),
+        font_size: 35.0,
+        ..default()
+    };
+    commands
+        .spawn((
+            Sprite::from_color(Color::srgb(0.1, 0.1, 0.1), d_box_size),
+            Transform::from_translation(d_box_pos.extend(0.0)),
+        ))
+        .with_children(|builder| {
+            builder.spawn((
+                Text2d::new("balls\n"),
+                d_box_font.clone(),
+                TextLayout::new(JustifyText::Left, LineBreak::AnyCharacter),
+                // TextBounds::from(d_box_size),
+                Transform::from_translation(Vec3::Z),
+            ));
+        });
+
     script_spawn(commands, asset_server);
 }
 
