@@ -1,12 +1,10 @@
 # Zakurust Rust Visual Novel Engine 
 
-### Things to do: 
-[ ] Scene system – Managing different story scenes.
-[ ] Dialogue system – Displaying text, character names, and character portraits.
-[ ] Choices system – Letting the player make branching choices.
-[ ] State persistence – Save/load game states (variables, choices).
-[ ] Script loader – Parsing story data from external files (e.g., JSON, YAML, or custom DSL).
-[ ] Assets system – Loading images, audio, fonts.
-[ ] UI framework – For text boxes, choice menus, and buttons.
-[ ] Transitions/animations – Fade in/out, character sprite changes.
-[ ] Sound system – Background music, sound effects.
+### Things to do 
+[X] protypes of basic vn system
+[ ] editor UI for vn creation 
+[ ] Codegen for json scripts 
+[ ] Parser for the assets file to make the scripts 
+[ ] rewrite script parser
+[ ] rewrite vn system
+[ ] embellsih (transitions, animations, main menu creation, states (save/load))
